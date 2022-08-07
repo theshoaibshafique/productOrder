@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Box, FormControl, TextField, Button, Typography } from '@mui/material';
 import { db } from '../firebase/Firebase';
 import { collection, addDoc, Timestamp } from 'firebase/firestore';
-const OrderForm = ({ productname, price }) => {
+const OrderForm = ({ product }) => {
   const [values, setValues] = useState({
-    productName: productname,
+    productName: product.name,
     name: '',
     address: '',
     city: '',
@@ -20,12 +20,12 @@ const OrderForm = ({ productname, price }) => {
       date: Timestamp.now(),
     });
     setValues({
-      productName: productname,
+      productName: product.name,
       name: '',
       address: '',
       city: '',
       mobile: '',
-      quantity: 1,
+      quantity: product.quantity,
       date: Timestamp.now(),
     });
     setSubmitting(false);
@@ -113,7 +113,7 @@ const OrderForm = ({ productname, price }) => {
           />
 
           <Typography variant="h5" sx={{ fontWeight: '700' }}>
-            Rs. {price}{' '}
+            Rs. {product.price}{' '}
           </Typography>
           <Typography variant="h6" sx={{ fontWeight: '700', color: 'red' }}>
             Free Home Delivery
