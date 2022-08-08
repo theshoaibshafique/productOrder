@@ -32,14 +32,10 @@ export const allProducts = [
   },
   {
     id: 'product2',
-    name: 'ABC',
+    name: 'abc',
     price: '950',
     quantity: '1',
-    images: [
-      './images/neurite_1.webp',
-      './images/neurite_2.webp',
-    
-    ],
+    images: ['./images/neurite_1.webp', './images/neurite_2.webp'],
     packages: [
       {
         id: 'packege1',
