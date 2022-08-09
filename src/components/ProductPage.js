@@ -23,7 +23,7 @@ const ProductPage = () => {
       }}
     >
       <a
-        href={`https://wa.me/+923239665525?text=I%27m%20api%20msg%20hello%20"`}
+        href={`https://wa.me/+923239665525?text=Hi%20Nutritely!%20I%20need%20more%20info%20about%20${product?.name}%20https://capzic.com/${product?.name}`}
         class="whatsapp_float"
         target="_blank"
         rel="noopener noreferrer"
